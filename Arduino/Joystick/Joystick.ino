@@ -1,4 +1,5 @@
 #include "ibus.h"
+#include <PS2X_lib.h> 
 
 
 // //////////////////
@@ -15,7 +16,7 @@
 // Every analog input is sent as a single channel.
 // Arduino Mega has 16 analog pins, however if your device has fewer you'll need to modify the count and pin list below
 
-#define ANALOG_INPUTS_COUNT 16
+#define ANALOG_INPUTS_COUNT 2
 byte analogPins[] = {A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15}; // element count MUST be == ANALOG_INPUTS_COUNT
 
 

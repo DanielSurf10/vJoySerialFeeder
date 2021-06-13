@@ -5,6 +5,10 @@
 // //////////////////
 // Edit here to customize
 
+// PS2X
+PS2X ps2x; 
+
+
 // How often to send data?
 #define UPDATE_INTERVAL 10 // milliseconds
 

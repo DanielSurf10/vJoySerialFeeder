@@ -20,8 +20,8 @@ PS2X ps2x;
 // Every analog input is sent as a single channel.
 // Arduino Mega has 16 analog pins, however if your device has fewer you'll need to modify the count and pin list below
 
-#define ANALOG_INPUTS_COUNT 8
-byte analogPins[] = {PSS_LX, PSS_LY, PSS_RX, PSS_RY}; // element count MUST be == ANALOG_INPUTS_COUNT
+#define ANALOG_INPUTS_COUNT 6
+byte analogPins[] = {PSS_LX, PSS_LY, PSAB_L2, PSS_RX, PSS_RY, PSAB_R2}; // element count MUST be == ANALOG_INPUTS_COUNT
 
 
 // 2. Digital channels. Data can be read from Arduino's digital pins.
@@ -41,8 +41,8 @@ bool digitalPins[] = {}; // element count MUST be == DIGITAL_INPUTS_COUNT
 // The first 16 pins will go in one channel (the first pin goes into the LSB of the channel).
 // The next 16 pins go in another channel and so on
 // LOW pins are encoded as 0 bit, HIGH - as 1.
-#define DIGITAL_BITMAPPED_INPUTS_COUNT 16
-long int digitalBitmappedPins[] = {PSB_BLUE, PSB_RED, PSB_PINK, PSB_GREEN, PSB_L1, PSB_L2, PSB_R1, PSB_R2, PSB_SELECT, PSB_START, PSB_L3, PSB_R3, PSB_PAD_DOWN, PSB_PAD_RIGHT, PSB_PAD_LEFT, PSB_PAD_UP}; // element count MUST be == DIGITAL_BITMAPPED_INPUTS_COUNT
+#define DIGITAL_BITMAPPED_INPUTS_COUNT 10
+long int digitalBitmappedPins[] = {PSB_BLUE, PSB_RED, PSB_PINK, PSB_GREEN, PSB_L1, PSB_R1, PSB_SELECT, PSB_START, PSB_L3, PSB_R3}; // element count MUST be == DIGITAL_BITMAPPED_INPUTS_COUNT
 
 
 // Define the appropriate analog reference source. See
